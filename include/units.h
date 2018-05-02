@@ -3577,6 +3577,8 @@ namespace units
 	UNIT_ADD(velocity, miles_per_hour, miles_per_hour, mph, compound_unit<length::miles, inverse<time::hour>>)
 	UNIT_ADD(velocity, kilometers_per_hour, kilometers_per_hour, kph, compound_unit<length::kilometers, inverse<time::hour>>)
 	UNIT_ADD(velocity, knot, knots, kts, compound_unit<length::nauticalMiles, inverse<time::hour>>)
+
+    UNIT_ADD(velocity, inches_per_second, inches_per_second, inps, units::compound_unit<units::length::inch, inverse<units::time::second>>)
 	
 	UNIT_ADD_CATEGORY_TRAIT(velocity)
 #endif
@@ -3618,6 +3620,8 @@ namespace units
 	UNIT_ADD(acceleration, meters_per_second_squared, meters_per_second_squared, mps_sq, unit<std::ratio<1>, units::category::acceleration_unit>)
 	UNIT_ADD(acceleration, feet_per_second_squared, feet_per_second_squared, fps_sq, compound_unit<length::feet, inverse<squared<time::seconds>>>)
 	UNIT_ADD(acceleration, standard_gravity, standard_gravity, SG, unit<std::ratio<980665, 100000>, meters_per_second_squared>)
+
+    UNIT_ADD(acceleration, inches_per_second_squared, inches_per_second_squared, inps_sq, compound_unit<length::inch, inverse<squared<time::seconds>>>)
 
 	UNIT_ADD_CATEGORY_TRAIT(acceleration)
 #endif
